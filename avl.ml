@@ -71,11 +71,6 @@ let balance_rl (n : ('k, 'v) avlnode) : ('k, 'v) avlnode =
       let hn = max hl hr + 1 in
       Node
         (hn, krl, vrl, Node (hl, k, v, left, rll), Node (hr, kr, vr, rlr, rr))
-      (* | Node (h, k, v, _, _) -> *)
-      (* (*DEBUG*) *)
-      (* let () = Printf.printf "Key: %s & value: %d\n%!" k v in *)
-      (* Leaf *)
-      (* (*DEBUG*) *)
   | _ -> failwith "cannot happen"
 
 (*
